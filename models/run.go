@@ -62,14 +62,13 @@ var user *string
 // 数据库初始化
 func initArgs() {
 	user = flag.String("user", "", "user")
+	ok := flag.Bool("s", false, "sync db")
 	if !flag.Parsed() {
 		flag.Parse()
 	}
-	args := os.Args
-	for _, v := range args {
-		if v == "-s" {
-			Syncdb()
-			os.Exit(0)
-		}
+
+	if *ok{
+		Syncdb()
+		os.Exit(1)
 	}
 }
