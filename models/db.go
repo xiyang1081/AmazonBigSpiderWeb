@@ -203,6 +203,32 @@ func Createdb() {
 	} else {
 		beego.Trace("Database ", db_name, " created")
 	}
+
+	db.Exec("CREATE DATABASE  if not exists smart_backstage CHARSET utf8 COLLATE utf8_general_ci")
+	_, derr := db.Exec(`
+CREATE TABLE smart_backstage.report (
+  id varchar(100) NOT NULL,
+  pasin varchar(100) DEFAULT NULL COMMENT 'Asin(父)',
+  asin varchar(100) DEFAULT NULL COMMENT 'Asin(子)',
+  title varchar(100) DEFAULT NULL COMMENT '商品名称',
+  uv int(11) DEFAULT NULL COMMENT '买家访问次数',
+  uvb varchar(100) DEFAULT NULL COMMENT '该日买家访问次数百分比',
+  pv int(11) DEFAULT NULL COMMENT '页面浏览次数',
+  pvb varchar(100) DEFAULT NULL COMMENT '该日页面浏览次数百分比',
+  bpvb varchar(100) DEFAULT NULL COMMENT '该日购物车占比',` +
+		"`on`" + ` int(11) DEFAULT NULL COMMENT '该日已订购商品数量',
+  onr varchar(100) DEFAULT NULL COMMENT '该日订单商品数量转化率',
+  v double DEFAULT NULL COMMENT '该日已订购商品销售额',
+  c int(11) DEFAULT NULL COMMENT '该日订单数',
+  d varchar(100) DEFAULT NULL COMMENT '日期',
+  aws varchar(100) DEFAULT NULL COMMENT '店铺名',
+  status tinyint(4) DEFAULT NULL COMMENT 'Asin(父)',
+  PRIMARY KEY (id)
+) ENGINE=InnoDB;
+`)
+	if derr != nil {
+		beego.Trace(derr.Error())
+	}
 	defer db.Close()
 	beego.Trace("建库结束")
 }
