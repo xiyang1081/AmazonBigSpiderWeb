@@ -124,7 +124,16 @@ go run main.go
 bee run
 ```
 
-5. 使用
+5.其他设置
+
+文件上传下载目录加权限:
+
+```
+mkdir file
+chmod 777 file
+```
+
+6.使用
 
 打开浏览器：[http://127.0.0.1:8080](http://127.0.0.1:8080)即可登录，账号密码为admin，admin
 
