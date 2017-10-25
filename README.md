@@ -1,6 +1,24 @@
 # 亚马逊大爬虫可视化界面Web端
 
-此为BI产品网站端，没有爬虫端，这个网站端几乎没有价值，请先启动爬虫端。有疑问可联系邮件或QQ。彻底开源。
+v2.0
+
+1. 支持用户权限控制, 精确到每个操作
+2. 支持报告数据功能, 允许统计亚马逊产品UV,PV等
+3. 支持多站点亚马逊爬虫数据汇聚
+4. 支持Asin产品库查找
+5. 支持定义类目, 控制爬虫端爬虫策略
+6. 支持亚马逊商品大类数据/小类数据查询/筛选
+7. 支持数据导出
+8. 支持单商品历史趋势查看
+
+[![GitHub forks](https://img.shields.io/github/forks/hunterhug/AmazonBigSpiderWeb.svg?style=social&label=Forks)](https://github.com/hunterhug/AmazonBigSpiderWeb/network)
+[![GitHub stars](https://img.shields.io/github/stars/hunterhug/AmazonBigSpiderWeb.svg?style=social&label=Stars)](https://github.com/hunterhug/AmazonBigSpiderWeb/stargazers)
+[![GitHub last commit](https://img.shields.io/github/last-commit/hunterhug/AmazonBigSpiderWeb.svg)](https://github.com/hunterhug/AmazonBigSpiderWeb)
+[![Go Report Card](https://goreportcard.com/badge/github.com/hunterhug/AmazonBigSpiderWeb)](https://goreportcard.com/report/github.com/hunterhug/AmazonBigSpiderWeb)
+[![GitHub issues](https://img.shields.io/github/issues/hunterhug/AmazonBigSpiderWeb.svg)](https://github.com/hunterhug/AmazonBigSpiderWeb/issues)
+
+
+此为亚马逊BI产品网站端，没有爬虫端，这个网站端没有价值，请先启动爬虫端。有疑问可联系邮件或QQ。彻底开源。
 
 亚马逊四站BI产品分布式爬虫端见： [Full Golang Automatic Amazon Distributed crawler|spider (USA, Japan, Germany and UK) | 亚马逊四站BI产品分布式爬虫端](https://github.com/hunterhug/AmazonBigSpider)
 
@@ -110,7 +128,6 @@ bee run
 
 打开浏览器：[http://127.0.0.1:8080](http://127.0.0.1:8080)即可登录，账号密码为admin，admin
 
-![](index.png)
 ![](web.png)
 
 
@@ -132,3 +149,39 @@ bee run
 >数据库数据填充在models/*/*Init.go中定义
 
 >视图模板均放在static中
+
+# 展示
+
+权限控制
+
+![](doc/rbac.png)
+
+Asin产品库
+
+![](doc/asin.png)
+
+小类数据查看,筛选
+
+![](doc/small.png)
+
+大类数据查看
+
+![](doc/big.png)
+
+大类数据导出
+
+![](doc/csv.png)
+
+类目查看/勾选
+
+![](doc/lei.png)
+
+报告数据导入/查看/导出(报告数据是从亚马逊后台按天导出, 重新汇聚后可以自己掌控自己店铺的运营情况)
+
+![](doc/report-data.png)
+
+产品历史趋势查看
+
+![](doc/trend.png)
+
+更多精彩...
