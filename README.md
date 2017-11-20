@@ -18,7 +18,7 @@ v2.0
 [![GitHub issues](https://img.shields.io/github/issues/hunterhug/AmazonBigSpiderWeb.svg)](https://github.com/hunterhug/AmazonBigSpiderWeb/issues)
 
 
-此为亚马逊BI产品网站端，没有爬虫端，这个网站端没有价值，请先启动爬虫端。有疑问可联系邮件或QQ。彻底开源。
+此为亚马逊BI产品网站端，没有爬虫端，这个网站端没有价值，请先启动爬虫端。
 
 亚马逊四站BI产品分布式爬虫端见： [Full Golang Automatic Amazon Distributed crawler|spider (USA, Japan, Germany and UK) | 亚马逊四站BI产品分布式爬虫端](https://github.com/hunterhug/AmazonBigSpider)
 
