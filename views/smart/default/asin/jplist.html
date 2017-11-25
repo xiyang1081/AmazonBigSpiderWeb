@@ -20,7 +20,8 @@
             </select>
 
 <label style="margin-left:10px"> 出现次数：</label>
-<input id="timesss" type="number" style="width:100px" value="0" />
+	<input id="timesss" name="timesss" type="number" style="width:100px" value="0" />
+	<a href="#" style="margin-left:10px;width:60px" class="easyui-linkbutton" onclick="getabout()">查询</a>
 
         <script type="text/javascript">
  function myformatter(date){
@@ -42,7 +43,6 @@ return new Date(y,m-1,d);
  }
  }
  </script>
-    <a href="#" style="margin-left:10px;width:60px" class="easyui-linkbutton" onclick="getabout()">查询</a>
 
 <label style="margin-left:10px"> ASIN：</label>
         <input type="text" id="asin" name="asin" />
