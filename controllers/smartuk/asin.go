@@ -64,7 +64,7 @@ func (this *AsinController) Query() {
 		where := []string{}
 		wheresql := ""
 		
-		timesss := this.GetInt("timesss", 0)	
+		timesss, _ := this.GetInt("timesss", 0)	
 		if timesss !=0 {
 			where = append(where, `times=`+util.IS(timesss))								
 		}	
