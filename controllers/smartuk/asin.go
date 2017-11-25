@@ -63,6 +63,11 @@ func (this *AsinController) Query() {
 		start := (page - 1) * rows
 		where := []string{}
 		wheresql := ""
+		
+		timesss := this.GetInt("timesss", 0)	
+		if timesss !=0 {
+			where = append(where, `times=`+util.IS(timesss))								
+		}	
 		if date == "" {
 		} else {
 			where = append(where, `updatetime like "`+date+`%"`)

@@ -18,6 +18,10 @@
             <option value="1">正常</option>
             <option value="0">已注销</option>
             </select>
+
+<label style="margin-left:10px"> 出现次数：</label>
+<input id="timesss" type="number" style="width:100px" value="0" />
+
         <script type="text/javascript">
  function myformatter(date){
  var y = date.getFullYear();
@@ -101,10 +105,12 @@ return new Date(y,m-1,d);
         var datename = $('#date').datebox('getValue');
         var bigname = $('#bigname').combobox('getValue');
         var isvalid =$('#isvalid').combobox('getValue');
+		var timesss =$('#timesss').combobox('getValue');
         $('#dg').datagrid('load', {
             datename: datename,
             bigname: bigname,
-            isvalid:isvalid
+            isvalid:isvalid,
+			timesss:timesss
         });
 
     }

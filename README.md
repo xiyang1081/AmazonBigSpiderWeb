@@ -131,6 +131,9 @@ bee run
 ```
 mkdir file
 chmod 777 file
+
+mkdir file/back
+mkdir file/data
 ```
 
 6.使用

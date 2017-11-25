@@ -59,10 +59,15 @@ func (this *AsinController) Query() {
 		date := this.GetString("datename")
 		date = strings.Replace(date, "-", "", -1)
 		isvalid, _ := this.GetInt("isvalid", 2)
-		bigname := this.GetString("bigname")
+		bigname := this.GetString("bigname")	
 		start := (page - 1) * rows
 		where := []string{}
 		wheresql := ""
+
+		timesss := this.GetInt("timesss", 0)	
+		if timesss !=0 {
+			where = append(where, `times=`+util.IS(timesss))								
+		}		
 		if date == "" {
 		} else {
 			where = append(where, `updatetime like "`+date+`%"`)
