@@ -22,7 +22,7 @@ import (
 	"fmt"
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/orm"
-	"github.com/hunterhug/GoSpider/util"
+	"github.com/hunterhug/GoTool/util"
 	"os"
 	"strconv"
 	"strings"

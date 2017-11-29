@@ -19,7 +19,7 @@ package smartuk
 import (
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/orm"
-	"github.com/hunterhug/GoSpider/util"
+	"github.com/hunterhug/GoTool/util"
 	"strconv"
 	"strings"
 )
