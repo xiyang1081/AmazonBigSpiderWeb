@@ -12,6 +12,14 @@
     <link href="/static/admin/adminassets/css/dpl-min.css" rel="stylesheet" type="text/css" />
     <link href="/static/admin/adminassets/css/bui-min.css" rel="stylesheet" type="text/css" />
     <link href="/static/admin/adminassets/css/main-min.css" rel="stylesheet" type="text/css" />
+    <style>
+    .center-in-center{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            font-size: 1.1em
+    }
+    </style>
 </head>
 
 <body>
@@ -41,8 +49,11 @@
                 {{end}}
             </ul>
         </div>
-        <ul id="J_NavContent" class="dl-tab-conten">
+        <ul id="J_NavContent" class="dl-tab-content">
         </ul>
+
+        <div class="center-in-center">{{.info}}</div>
+
     </div>
     <script type="text/javascript" src="/static/admin/adminassets/js/jquery-1.8.1.min.js"></script>
     <script type="text/javascript" src="/static/admin/adminassets/js/bui-min.js"></script>

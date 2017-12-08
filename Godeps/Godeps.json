@@ -83,8 +83,8 @@
 		},
 		{
 			"ImportPath": "github.com/hunterhug/GoSpider/spider",
-			"Comment": "v2.0",
-			"Rev": "aa2a2fab5564d71dd08eb757ef0ba8a5fc00a504"
+			"Comment": "v2.2-1-gf05c775",
+			"Rev": "f05c7759a3c63a40ada96614569b790cec9e83fe"
 		},
 		{
 			"ImportPath": "github.com/hunterhug/GoTool/util",
@@ -94,6 +94,10 @@
 			"ImportPath": "github.com/op/go-logging",
 			"Comment": "v1-7-g970db52",
 			"Rev": "970db520ece77730c7e4724c61121037378659d9"
+		},
+		{
+			"ImportPath": "golang.org/x/net/proxy",
+			"Rev": "c73622c77280266305273cb545f54516ced95b93"
 		}
 	]
 }

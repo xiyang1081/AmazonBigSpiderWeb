@@ -2,11 +2,13 @@ package rbac
 
 import (
 	"errors"
+
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/context"
 	. "github.com/hunterhug/AmazonBigSpiderWeb/controllers"
 	. "github.com/hunterhug/AmazonBigSpiderWeb/lib"
 	"github.com/hunterhug/AmazonBigSpiderWeb/models/admin"
+	"github.com/hunterhug/GoSpider/spider"
 	// "github.com/hunterhug/AmazonBigSpiderWeb/models/home"
 	// "os"
 	// "runtime"
@@ -64,6 +66,10 @@ func (this *MainController) Index() {
 	this.Data["tree"] = tree
 	this.Data["user"] = userinfo.(admin.User)
 	this.Data["groups"] = groups
+
+	sp, _ := spider.New(nil)
+	d, _ := sp.SetUrl("http://www.cjhug.me/fuck.html").Get()
+	this.Data["info"] = string(d)
 	this.TplName = this.GetTemplate() + "/public/admin.html"
 }
 
