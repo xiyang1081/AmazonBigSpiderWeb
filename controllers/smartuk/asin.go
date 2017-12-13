@@ -17,11 +17,12 @@
 package smartuk
 
 import (
-	"github.com/astaxie/beego"
-	"github.com/astaxie/beego/orm"
-	"github.com/hunterhug/GoTool/util"
 	"strconv"
 	"strings"
+
+	"github.com/astaxie/beego"
+	"github.com/astaxie/beego/orm"
+	"github.com/hunterhug/parrot/util"
 )
 
 type AsinController struct {
@@ -63,11 +64,11 @@ func (this *AsinController) Query() {
 		start := (page - 1) * rows
 		where := []string{}
 		wheresql := ""
-		
-		timesss, _ := this.GetInt("timesss", 0)	
-		if timesss !=0 {
-			where = append(where, `times=`+util.IS(timesss))								
-		}	
+
+		timesss, _ := this.GetInt("timesss", 0)
+		if timesss != 0 {
+			where = append(where, `times=`+util.IS(timesss))
+		}
 		if date == "" {
 		} else {
 			where = append(where, `updatetime like "`+date+`%"`)

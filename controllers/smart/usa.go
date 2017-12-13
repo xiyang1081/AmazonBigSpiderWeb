@@ -20,7 +20,7 @@ import (
 	"encoding/csv"
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/orm"
-	"github.com/hunterhug/GoTool/util"
+	"github.com/hunterhug/parrot/util"
 	"os"
 	"strconv"
 	"strings"

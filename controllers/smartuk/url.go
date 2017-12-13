@@ -17,11 +17,12 @@
 package smartuk
 
 import (
-	"github.com/astaxie/beego"
-	"github.com/astaxie/beego/orm"
-	"github.com/hunterhug/GoTool/util"
 	"strconv"
 	"strings"
+
+	"github.com/astaxie/beego"
+	"github.com/astaxie/beego/orm"
+	"github.com/hunterhug/parrot/util"
 )
 
 type UrlController struct {

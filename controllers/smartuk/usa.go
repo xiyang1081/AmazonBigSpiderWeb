@@ -18,12 +18,13 @@ package smartuk
 
 import (
 	"encoding/csv"
-	"github.com/astaxie/beego"
-	"github.com/astaxie/beego/orm"
-	"github.com/hunterhug/GoTool/util"
 	"os"
 	"strconv"
 	"strings"
+
+	"github.com/astaxie/beego"
+	"github.com/astaxie/beego/orm"
+	"github.com/hunterhug/parrot/util"
 )
 
 type UsaController struct {

@@ -4,10 +4,11 @@ package models
 import (
 	"flag"
 	"fmt"
-	"github.com/astaxie/beego"
-	"github.com/hunterhug/GoSpider/spider"
 	"os"
 	"strings"
+
+	"github.com/astaxie/beego"
+	spider "github.com/hunterhug/marmot/miner"
 )
 
 // 数据库开跑
@@ -67,7 +68,7 @@ func initArgs() {
 		flag.Parse()
 	}
 
-	if *ok{
+	if *ok {
 		Syncdb()
 		os.Exit(1)
 	}

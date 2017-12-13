@@ -22,7 +22,7 @@ v2.0
 
 亚马逊四站BI产品分布式爬虫端见： [Full Golang Automatic Amazon Distributed crawler|spider (USA, Japan, Germany and UK) | 亚马逊四站BI产品分布式爬虫端](https://github.com/hunterhug/AmazonBigSpider)
 
-此Web框架已经优化，改BUG，定制成为另外的强大的网站，见[https://www.github.com/hunterhug/GoWeb](https://www.github.com/hunterhug/GoWeb)
+此Web框架已经优化，改BUG，定制成为另外的强大的网站，见[https://www.github.com/hunterhug/rabbit](https://www.github.com/hunterhug/rabbit)
 
 请安装Golang1.8环境和Mysql数据库，如何安装请百度。
 

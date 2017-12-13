@@ -18,13 +18,14 @@ package smart
 
 import (
 	"encoding/csv"
-	"github.com/astaxie/beego"
-	"github.com/astaxie/beego/orm"
-	"github.com/hunterhug/GoTool/util"
-	"github.com/hunterhug/AmazonBigSpiderWeb/lib"
 	"os"
 	"strconv"
 	"strings"
+
+	"github.com/astaxie/beego"
+	"github.com/astaxie/beego/orm"
+	"github.com/hunterhug/AmazonBigSpiderWeb/lib"
+	"github.com/hunterhug/parrot/util"
 )
 
 type ReportController struct {

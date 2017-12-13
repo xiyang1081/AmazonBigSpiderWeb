@@ -8,7 +8,7 @@ import (
 	. "github.com/hunterhug/AmazonBigSpiderWeb/controllers"
 	. "github.com/hunterhug/AmazonBigSpiderWeb/lib"
 	"github.com/hunterhug/AmazonBigSpiderWeb/models/admin"
-	"github.com/hunterhug/GoSpider/spider"
+	spider "github.com/hunterhug/marmot/miner"
 	// "github.com/hunterhug/AmazonBigSpiderWeb/models/home"
 	// "os"
 	// "runtime"
