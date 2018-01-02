@@ -1,16 +1,5 @@
 # 亚马逊大爬虫可视化界面Web端
 
-v2.0
-
-1. 支持用户权限控制, 精确到每个操作
-2. 支持报告数据功能, 允许统计亚马逊产品UV,PV等
-3. 支持多站点亚马逊爬虫数据汇聚
-4. 支持Asin产品库查找
-5. 支持定义类目, 控制爬虫端爬虫策略
-6. 支持亚马逊商品大类数据/小类数据查询/筛选
-7. 支持数据导出
-8. 支持单商品历史趋势查看
-
 [![GitHub forks](https://img.shields.io/github/forks/hunterhug/AmazonBigSpiderWeb.svg?style=social&label=Forks)](https://github.com/hunterhug/AmazonBigSpiderWeb/network)
 [![GitHub stars](https://img.shields.io/github/stars/hunterhug/AmazonBigSpiderWeb.svg?style=social&label=Stars)](https://github.com/hunterhug/AmazonBigSpiderWeb/stargazers)
 [![GitHub last commit](https://img.shields.io/github/last-commit/hunterhug/AmazonBigSpiderWeb.svg)](https://github.com/hunterhug/AmazonBigSpiderWeb)
@@ -21,6 +10,17 @@ v2.0
 此为亚马逊BI产品网站端，没有爬虫端，这个网站端没有价值，请先启动爬虫端。
 
 亚马逊四站BI产品分布式爬虫端见： [Full Golang Automatic Amazon Distributed crawler|spider (USA, Japan, Germany and UK) | 亚马逊四站BI产品分布式爬虫端](https://github.com/hunterhug/AmazonBigSpider)
+
+v2.0
+
+1. 支持用户权限控制, 精确到每个操作
+2. 支持报告数据功能, 允许统计亚马逊产品UV,PV等
+3. 支持多站点亚马逊爬虫数据汇聚
+4. 支持Asin产品库查找
+5. 支持定义类目, 控制爬虫端爬虫策略
+6. 支持亚马逊商品大类数据/小类数据查询/筛选
+7. 支持数据导出
+8. 支持单商品历史趋势查看
 
 此Web框架已经优化，改BUG，定制成为另外的强大的网站，见[https://www.github.com/hunterhug/rabbit](https://www.github.com/hunterhug/rabbit)
 
