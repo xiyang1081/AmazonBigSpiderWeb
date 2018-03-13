@@ -21,7 +21,7 @@ import (
 	"os"
 	"strconv"
 	"strings"
-
+	//"fmt"
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/orm"
 	"github.com/hunterhug/AmazonBigSpiderWeb/lib"
@@ -105,7 +105,8 @@ func (this *ReportController) Query() {
 	dudu := "SELECT * FROM `report` " + wheresql + " order by d,uv desc limit " + strconv.Itoa(start) + "," + strconv.Itoa(rows) + ";"
 
 	DB.Raw(dudu).Values(&maps)
-
+	//fmt.Printf("%#v\n",dudu)
+	//fmt.Printf("%#v\n",maps)
 	dudu1 := "SELECT count(*) as num FROM `report` " + wheresql + ";"
 
 	DB.Raw(dudu1).QueryRow(&num)
@@ -300,6 +301,7 @@ func (this *ReportController) Import() {
 		for _, v := range good {
 			row := strings.Split(v, `","`)
 			for i := 0; i <= len(row)-1; i++ {
+				row[i] = strings.Replace(row[i], "\r", "", -1)
 				row[i] = strings.Replace(row[i], ",", "", -1)
 				row[i] = strings.Replace(row[i], `"`, "", -1)
 			}
@@ -308,24 +310,28 @@ func (this *ReportController) Import() {
 				result = append(result, row)
 			}
 		}
-		//fmt.Printf("%#v",result)
+		//fmt.Printf("%#v\n",result)
 		for _, v := range result {
 			visitnum, e := util.SI(v[3])
 			if e != nil {
+				beego.Error(e.Error())
 				continue
 			}
 			pv, e := util.SI(v[5])
 			if e != nil {
+				beego.Error(e.Error())
 				continue
 			}
 
 			on, e := util.SI(v[8])
 			if e != nil {
+				beego.Error(e.Error())
 				continue
 			}
 
 			c, e := util.SI(v[11])
 			if e != nil {
+				beego.Error(e.Error())
 				continue
 			}
 			va := strings.Replace(v[10], "US$", "", -1)
@@ -333,14 +339,20 @@ func (this *ReportController) Import() {
 			va = strings.Replace(va, ",", "", -1)
 			vv, e := strconv.ParseFloat(va, 32)
 			if e != nil {
+				beego.Error(e.Error())
 				continue
 			}
 			id := lib.Md5(datastring + "-" + awsname + "-" + v[1])
 
+			//fmt.Println(id)
 			//fmt.Println(visitnum, id)
 			sql := "Replace INTO `report`(`id`,`pasin`,`asin`,`title`,`uv`,`uvb`,`pv`,`pvb`,`bpvb`,`on`,`onr`,`v`,`c`,`d`,`aws`,`status`)VALUES"
 			sql = sql + "(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,1)"
-			_, sqlr := DB.Raw(sql, id, v[0], v[1], v[2], visitnum, v[4], pv, v[6], v[7], on, v[9], vv, c, datastring, awsname).Exec()
+			//fmt.Printf("%#v\n",v)
+			if len(v[2]) > 40{
+				v[2] = v[2][0:38]
+			}
+                        _, sqlr := DB.Raw(sql, id, v[0], v[1], v[2], visitnum, v[4], pv, v[6], v[7], on, v[9], vv, c, datastring, awsname).Exec()
 			if sqlr != nil {
 				beego.Error(sqlr.Error())
 				continue
