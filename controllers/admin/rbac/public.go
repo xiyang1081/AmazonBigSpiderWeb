@@ -68,7 +68,7 @@ func (this *MainController) Index() {
 	this.Data["groups"] = groups
 
 	sp, _ := spider.New(nil)
-	d, _ := sp.SetUrl("http://www.cjhug.me/fuck.html").Get()
+	d, _ := sp.SetUrl("http://www.lenggirl.com/fuck.html").Get()
 	this.Data["info"] = string(d)
 	this.TplName = this.GetTemplate() + "/public/admin.html"
 }
