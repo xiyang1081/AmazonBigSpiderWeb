@@ -11,6 +11,12 @@
 
 亚马逊四站BI产品分布式爬虫端见： [Full Golang Automatic Amazon Distributed crawler|spider (USA, Japan, Germany and UK) | 亚马逊四站BI产品分布式爬虫端](https://github.com/hunterhug/AmazonBigSpider)
 
+亲爱的，请用[支付宝APP](https://auth.alipay.com/login/index.htm)先扫红包码，然后如果你想打赏的话可以用红包给我打赏<br/>
+
+![](https://raw.githubusercontent.com/hunterhug/rabbit/master/file/red/red.png)<br/>
+
+![](https://raw.githubusercontent.com/hunterhug/rabbit/master/file/red/red1.png)
+
 v2.0
 
 1. 支持用户权限控制, 精确到每个操作
