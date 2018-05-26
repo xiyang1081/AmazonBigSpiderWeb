@@ -87,6 +87,9 @@ func (this *BigController) Asin() {
 		data["day"] = append(data["day"], v["day"])
 		data["price"] = append(data["price"], v["price"])
 		data["score"] = append(data["score"], v["score"])
+		if v["rank"].(string) == "987654321"{
+			v["rank"] = 0
+		}
 		data["rank"] = append(data["rank"], v["rank"])
 		data["reviews"] = append(data["reviews"], v["reviews"])
 	}

@@ -79,6 +79,9 @@ func (this *BigController) Asin() {
 	data["day"] = []interface{}{}
 	data["price"] = []interface{}{}
 	data["score"] = []interface{}{}
+	if v["rank"].(string) == "987654321"{
+		v["rank"] = 0
+	}
 	data["rank"] = []interface{}{}
 	data["reviews"] = []interface{}{}
 	data["bigname"] = []interface{}{}
