@@ -87,7 +87,7 @@ func (this *AsinController) Query() {
 			wheresql = strings.Join(where, " and ")
 			wheresql = "where " + wheresql
 		}
-		dudu := "SELECT * FROM smart_asin " + wheresql + " order by times, updatetime limit " + strconv.Itoa(start) + "," + strconv.Itoa(rows) + ";"
+		dudu := "SELECT * FROM smart_asin " + wheresql + " order by times desc, updatetime desc limit " + strconv.Itoa(start) + "," + strconv.Itoa(rows) + ";"
 		DB.Raw(dudu).Values(&maps)
 
 		dudu1 := "SELECT count(*) as num FROM smart_asin " + wheresql + ";"
